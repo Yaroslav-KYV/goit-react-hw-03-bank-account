@@ -1,6 +1,6 @@
 ## Link to Netlify-page
 
-[https://sl-bank-account.netlify.com/]
+https://sl-bank-account.netlify.com
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
