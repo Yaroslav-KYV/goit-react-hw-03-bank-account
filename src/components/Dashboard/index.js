@@ -26,18 +26,16 @@ export default class Dashboard extends Component {
   };
 
   componentDidMount() {
-    const transactions = Storage.get('transactions');
-    const balance = Storage.get('balance');
-    if (transactions && balance) {
-      this.setState({ transactions, balance });
+    const dataAccount = Storage.get('dataAccount');
+    if (dataAccount) {
+      this.setState({ ...dataAccount });
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { transactions, balance } = this.state;
+    const { transactions } = this.state;
     if (prevState.transactions !== transactions) {
-      Storage.set('transactions', transactions);
-      Storage.set('balance', balance);
+      Storage.set('dataAccount', this.state);
     }
   }
 
